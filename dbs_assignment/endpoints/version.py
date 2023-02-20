@@ -14,6 +14,7 @@ async def version():
         cur = conn.cursor()
         cur.execute('SELECT version()')
         db_version = cur.fetchone()
+        db_version = db_version[0]
         cur.close()
         conn.close()
     except:
