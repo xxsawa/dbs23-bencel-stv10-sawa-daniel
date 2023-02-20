@@ -10,7 +10,7 @@ async def version():
     
     db_version = "Connection error"
     try:
-        conn = psycopg2.connect("dbname=dbs user=postgres password=password host=172.17.0.2 port=5432")
+        conn = psycopg2.connect("dbname=dbs user=xsawa password=SuperTajneHeslo host=127.0.0.1 port=5432")
         cur = conn.cursor()
         cur.execute('SELECT version()')
         db_version = cur.fetchone()
